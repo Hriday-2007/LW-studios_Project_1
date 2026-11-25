@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LW Studio — Architectural Visualization</title>
+    <meta
+      name="description"
+      content="LW Studio crafts atmospheric architectural visualizations. Interactive winter study of a timber waterside pavilion."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307101c'/%3E%3Cpath d='M5 7v18h10M14 7l4 15 4-10 4 10 2-15' fill='none' stroke='%237fd4f7' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-DAzbV3gE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DvZ8_kgI.css">
+  </head>
+  <body>
+    <a href="#hero-stage" class="skip-link visually-hidden">Skip to architectural hero</a>
+
+    <!-- Loading Overlay -->
+    <div id="loader" class="loader" role="region" aria-label="Loading architectural scene">
+      <div class="loader-frame" aria-hidden="true">
+        <span class="loader-corner tl"></span>
+        <span class="loader-corner tr"></span>
+        <span class="loader-corner bl"></span>
+        <span class="loader-corner br"></span>
+      </div>
+      <div class="loader-inner">
+        <div class="loader-mark">
+          <svg class="brand-glyph" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 6V26H16" fill="none" stroke="currentColor" stroke-width="1.35" />
+            <path d="M13 6L18 23L22.5 11L27 23L29 6" fill="none" stroke="currentColor" stroke-width="1.35" />
+          </svg>
+          <span class="loader-wordmark">LW STUDIO</span>
+        </div>
+        <div class="loader-rule" aria-hidden="true"></div>
+        <label for="scene-progress" class="loader-label">
+          <span id="loader-status">CALIBRATING WINTER ATMOSPHERE</span>
+          <span id="loader-percent" class="loader-percent">00%</span>
+        </label>
+        <progress id="scene-progress" class="loader-progress" value="0" max="100"></progress>
+      </div>
+    </div>
+
+    <!-- Main Interactive Hero -->
+    <main id="hero-stage" class="hero" tabindex="-1">
+      <canvas id="scene-canvas" class="scene-canvas" aria-label="Interactive 3D winter architectural visualization of a timber waterside pavilion"></canvas>
+
+      <!-- Subtle atmospheric vignette & architectural framing hairlines -->
+      <div class="scene-vignette" aria-hidden="true"></div>
+
+      <!-- Projected 3D Architectural Guides SVG Overlay -->
+      <svg id="arch-guides" class="arch-guides" aria-hidden="true" preserveAspectRatio="none">
+        <g id="arch-guides-group" class="arch-guides-group"></g>
+      </svg>
+
+      <!-- Top Editorial Header -->
+      <header class="site-header">
+        <a href="#hero-stage" class="wordmark" aria-label="LW Studio — Home">
+          <svg class="brand-glyph" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 6V26H16" fill="none" stroke="currentColor" stroke-width="1.35" />
+            <path d="M13 6L18 23L22.5 11L27 23L29 6" fill="none" stroke="currentColor" stroke-width="1.35" />
+          </svg>
+          <span class="wordmark-text">
+            <span class="wordmark-name">LW <em>Studio</em></span>
+            <span class="wordmark-sub">Architectural Visualization</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li>
+              <button type="button" class="nav-link" data-nav-action="view" data-stage="0">
+                <span class="nav-index">01</span>
+                <span class="nav-label">Works</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-link" data-nav-action="view" data-stage="2">
+                <span class="nav-index">02</span>
+                <span class="nav-label">Tectonics</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-link" data-nav-action="explore">
+                <span class="nav-index">03</span>
+                <span class="nav-label">Wireframe</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-link" data-nav-action="view" data-stage="4">
+                <span class="nav-index">04</span>
+                <span class="nav-label">Monograph</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Stage Editorial Copy Region -->
+      <section id="editorial-panel" class="editorial-panel" aria-live="polite" aria-atomic="true">
+        <div class="editorial-meta">
+          <span id="stage-counter" class="stage-counter">STAGE 01 / 05</span>
+          <span class="meta-rule" aria-hidden="true"></span>
+          <span id="stage-tag" class="stage-tag">WATERSIDE PAVILION · WINTER</span>
+        </div>
+
+        <div id="headline-hover-zone" class="editorial-headline-wrap">
+          <h1 id="stage-headline" class="editorial-headline">
+            <span id="headline-base" class="headline-base"></span>
+            <span id="headline-scan" class="headline-scan" aria-hidden="true"></span>
+            <span id="headline-outline" class="headline-outline" aria-hidden="true"></span>
+            <span class="headline-beam" aria-hidden="true"></span>
+          </h1>
+        </div>
+
+        <div class="editorial-rule" aria-hidden="true"></div>
+
+        <p id="stage-description" class="editorial-description"></p>
+      </section>
+
+      <!-- Transparent Views Panel (Visible in all 5 stages) -->
+      <aside class="views-panel" aria-label="Camera views">
+        <div class="views-header">
+          <span class="views-title">Views</span>
+          <span id="views-telemetry" class="views-telemetry">AZ 038° · EL 16°</span>
+        </div>
+        <div class="views-divider" aria-hidden="true"></div>
+        <ul class="views-list" role="list">
+          <li>
+            <button type="button" class="view-btn is-active" data-stage-btn="0" aria-current="step">
+              <span class="view-num">01</span>
+              <span class="view-name">Approach</span>
+              <span class="view-tick" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="view-btn" data-stage-btn="1">
+              <span class="view-num">02</span>
+              <span class="view-name">Reflection</span>
+              <span class="view-tick" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="view-btn" data-stage-btn="2">
+              <span class="view-num">03</span>
+              <span class="view-name">Roofscape</span>
+              <span class="view-tick" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="view-btn" data-stage-btn="3">
+              <span class="view-num">04</span>
+              <span class="view-name">Planimetry</span>
+              <span class="view-tick" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="view-btn" data-stage-btn="4">
+              <span class="view-num">05</span>
+              <span class="view-name">Synthesis</span>
+              <span class="view-tick" aria-hidden="true"></span>
+            </button>
+          </li>
+        </ul>
+        <div class="views-controls">
+          <button type="button" id="prev-stage-btn" class="step-arrow" aria-label="Previous camera view">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 12V4M4.5 7.5L8 4l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.25" />
+            </svg>
+          </button>
+          <span class="scroll-hint" id="scroll-hint">Scroll or use ↑ ↓</span>
+          <button type="button" id="next-stage-btn" class="step-arrow" aria-label="Next camera view">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 4v8M4.5 8.5L8 12l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.25" />
+            </svg>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Compact Secondary Information Area -->
+      <footer class="secondary-bar">
+        <div class="structure-actions">
+          <button
+            type="button"
+            id="explore-structure-btn"
+            class="explore-btn"
+            aria-pressed="false"
+          >
+            <span class="explore-dot" aria-hidden="true"></span>
+            <span class="explore-text">Explore the Structure</span>
+            <span class="explore-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <div id="structure-pill-bar" class="structure-pill-bar" hidden>
+            <button type="button" class="struct-part-btn is-selected" data-part="all">Full Envelope</button>
+            <button type="button" class="struct-part-btn" data-part="roof">Roofscape</button>
+            <button type="button" class="struct-part-btn" data-part="upper">Upper Shoji</button>
+            <button type="button" class="struct-part-btn" data-part="entry">Entry Pavilion</button>
+            <button type="button" class="struct-part-btn" data-part="deck">Cedar Stilts</button>
+          </div>
+        </div>
+
+        <div class="ticker-shell" aria-label="Architectural material specifications">
+          <div class="ticker-track">
+            <div class="ticker-group">
+              <span>CURVED CERAMIC TILES</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>CEDAR STILTS &amp; CORBELS</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>OXBLOOD LACQUER FRAMES</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>RICE PAPER SHOJI</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>CANTILEVERED EAVE RAFTERS</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>WARM PAPER LANTERNS</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+              <span>WINTER WATERLINE</span>
+              <span class="ticker-sep" aria-hidden="true">·</span>
+            </div>
+            <div class="ticker-group" aria-hidden="true">
+              <span>CURVED CERAMIC TILES</span>
+              <span class="ticker-sep">·</span>
+              <span>CEDAR STILTS &amp; CORBELS</span>
+              <span class="ticker-sep">·</span>
+              <span>OXBLOOD LACQUER FRAMES</span>
+              <span class="ticker-sep">·</span>
+              <span>RICE PAPER SHOJI</span>
+              <span class="ticker-sep">·</span>
+              <span>CANTILEVERED EAVE RAFTERS</span>
+              <span class="ticker-sep">·</span>
+              <span>WARM PAPER LANTERNS</span>
+              <span class="ticker-sep">·</span>
+              <span>WINTER WATERLINE</span>
+              <span class="ticker-sep">·</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Custom Architectural Inspection Cursor -->
+      <div id="arch-cursor" class="arch-cursor" aria-hidden="true">
+        <div class="cursor-ring">
+          <span class="c-tick t"></span>
+          <span class="c-tick r"></span>
+          <span class="c-tick b"></span>
+          <span class="c-tick l"></span>
+        </div>
+        <div class="cursor-dot"></div>
+        <div id="cursor-readout" class="cursor-readout">INSPECT</div>
+      </div>
+
+      <!-- Screen-reader stage announcement -->
+      <div id="sr-announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+    </main>
+
+  </body>
+</html>
+
